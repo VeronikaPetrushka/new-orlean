@@ -78,14 +78,14 @@ const Home = () => {
 
                 <View style={[styles.btnsContainer, {marginBottom: 0}]}>
                     <View style={{alignItems: 'center'}}>
-                        <TouchableOpacity style={styles.upperIcon} onPress={() => navigation.navigate('ScoreboardScreen')}>
+                        <TouchableOpacity style={styles.upperIcon} onPress={() => navigation.navigate('StoriesScreen')}>
                             <Icons type={'stories'} />
                         </TouchableOpacity>
                         <Text style={styles.btnText}>Hidden stories</Text>
                     </View>
 
                     <View style={{alignItems: 'center'}}>
-                        <TouchableOpacity style={styles.upperIcon} onPress={() => navigation.navigate('TimelineScreen')}>
+                        <TouchableOpacity style={styles.upperIcon} onPress={() => navigation.navigate('AlbumScreen')}>
                             <Icons type={'album'} />
                         </TouchableOpacity>
                         <Text style={styles.btnText}>Photo album</Text>

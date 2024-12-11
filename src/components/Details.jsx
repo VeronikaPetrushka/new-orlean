@@ -1,16 +1,57 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ImageBackground, View, Text, TouchableOpacity, Image, Dimensions, StyleSheet, ScrollView } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { launchImageLibrary } from 'react-native-image-picker';
 import { useNavigation } from "@react-navigation/native";
 import MapView, { Marker } from 'react-native-maps';
 import Icons from "./Icons";
 
-const { height } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const Details = ({ place }) => {
     const mapRef = useRef(null);
     const navigation = useNavigation();
     const [isMap, setIsMap] = useState(false);
+    const [uploadedImages, setUploadedImages] = useState([]);
+
+    useEffect(() => {
+        const fetchUploadedImages = async () => {
+            const album = await AsyncStorage.getItem('album');
+            const parsedAlbum = album ? JSON.parse(album) : {};
+            setUploadedImages(parsedAlbum[place.name] || []);
+
+            console.log(album)
+        };
+        fetchUploadedImages();
+    }, [place.name]);
+    
+    const handleUploadImage = () => {
+        const options = {
+            mediaType: 'photo',
+            quality: 1,
+        };
+    
+        launchImageLibrary(options, async (response) => {
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.errorCode) {
+                console.log('ImagePicker Error: ', response.errorMessage);
+                alert('Error selecting image. Please try again.');
+            } else if (response.assets && response.assets.length > 0) {
+                const newImage = response.assets[0].uri;
+    
+                const album = await AsyncStorage.getItem('album');
+                const parsedAlbum = album ? JSON.parse(album) : {};
+    
+                const updatedImages = [...(parsedAlbum[place.name] || []), newImage];
+                parsedAlbum[place.name] = updatedImages;
+    
+                await AsyncStorage.setItem('album', JSON.stringify(parsedAlbum));
+    
+                setUploadedImages(updatedImages);
+            }
+        });
+    };
 
     const handleShowMap = () => {
         if (isMap) {
@@ -34,7 +75,7 @@ const Details = ({ place }) => {
                         <Icons type={'map'} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.back}>
+                    <TouchableOpacity style={styles.back} onPress={handleUploadImage}>
                         <Icons type={'camera'} />
                     </TouchableOpacity>
 
@@ -70,7 +111,25 @@ const Details = ({ place }) => {
                             </MapView>
                         </View>            
                     ) : (
-                        <Image source={place.image} style={styles.image} />
+                        <View style={{height: height * 0.35, marginBottom: height * 0.03}}>
+                            <ScrollView 
+                                style={{height: height * 0.35}} 
+                                horizontal={true}
+                                showsHorizontalScrollIndicator={true} 
+                                contentContainerStyle={styles.imageScrollContainer}
+                                >
+                                <Image source={place.image} style={styles.scrollableImage} />
+                                {uploadedImages.length > 0 &&
+                                    uploadedImages.map((item, index) => (
+                                        <Image
+                                            key={`${place.name}_${index}`}
+                                            source={{ uri: item }}
+                                            style={styles.scrollableImage}
+                                        />
+                                    ))
+                                }
+                            </ScrollView>                    
+                        </View>
                     )
                 }
                 
@@ -140,13 +199,20 @@ const styles = StyleSheet.create({
         height: 60
     },
 
-    image: {
-        width: '100%',
+    imageScrollContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
+    
+    scrollableImage: {
+        width: width * 0.87,
         height: height * 0.35,
         borderRadius: 12,
-        marginBottom: height * 0.03,
-        resizeMode: 'cover'
+        marginRight: 10,
+        resizeMode: 'cover',
     },
+    
 
     name: {
         fontSize: 22,

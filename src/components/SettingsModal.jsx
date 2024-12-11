@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Vibration, Dimensions, Modal, Image, TextInput, ScrollView } from 'react-native';
+import { launchImageLibrary } from 'react-native-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useMusic } from '../constants/music.js';
 import Icons from './Icons.jsx';

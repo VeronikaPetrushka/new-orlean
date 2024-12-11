@@ -9,6 +9,7 @@ import MusicPlayer from './src/components/MusicPlayer';
 import HomeScreen from './src/screens/HomeScreen';
 import PlacesScreen from './src/screens/PlacesScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
+import AlbumScreen from './src/screens/AlbumScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -42,6 +43,11 @@ const App = () => {
                         <Stack.Screen 
                             name="DetailsScreen" 
                             component={DetailsScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="AlbumScreen" 
+                            component={AlbumScreen} 
                             options={{ headerShown: false }} 
                         />
                     </Stack.Navigator>
