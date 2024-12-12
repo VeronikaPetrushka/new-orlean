@@ -10,6 +10,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import PlacesScreen from './src/screens/PlacesScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 import AlbumScreen from './src/screens/AlbumScreen';
+import TimelineScreen from './src/screens/TimelineScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -48,6 +49,11 @@ const App = () => {
                         <Stack.Screen 
                             name="AlbumScreen" 
                             component={AlbumScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="TimelineScreen" 
+                            component={TimelineScreen} 
                             options={{ headerShown: false }} 
                         />
                     </Stack.Navigator>
