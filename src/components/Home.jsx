@@ -63,7 +63,7 @@ const Home = () => {
                             <Text style={styles.gameBtnText}>Quiz</Text>
                         </LinearGradient>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.gameBtn} onPress={() => navigation.navigate('CrapsScreen')}>
+                    <TouchableOpacity style={styles.gameBtn} onPress={() => navigation.navigate('CrapsGameScreen')}>
                         <LinearGradient
                                     colors={['#f6d300', '#8f3cfb']}
                                     

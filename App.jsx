@@ -14,6 +14,7 @@ import TimelineScreen from './src/screens/TimelineScreen';
 import ScoreboardScreen from './src/screens/ScoreboardScreen';
 import StoriesScreen from './src/screens/StoriesScreen';
 import FullStoryScreen from './src/screens/FullStoryScreen';
+import CrapsGameScreen from './src/screens/CrapsGameScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -72,6 +73,11 @@ const App = () => {
                         <Stack.Screen 
                             name="FullStoryScreen" 
                             component={FullStoryScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="CrapsGameScreen" 
+                            component={CrapsGameScreen} 
                             options={{ headerShown: false }} 
                         />
                     </Stack.Navigator>

@@ -52,6 +52,9 @@ const Icons = ({ type, light }) => {
     case 'camera':
       imageSource = require('../assets/common/camera.png');
       break;
+    case 'dice':
+      imageSource = require('../assets/craps/dice.png');
+      break;
   }
 
   return (
