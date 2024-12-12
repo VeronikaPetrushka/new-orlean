@@ -11,6 +11,9 @@ import PlacesScreen from './src/screens/PlacesScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 import AlbumScreen from './src/screens/AlbumScreen';
 import TimelineScreen from './src/screens/TimelineScreen';
+import ScoreboardScreen from './src/screens/ScoreboardScreen';
+import StoriesScreen from './src/screens/StoriesScreen';
+import FullStoryScreen from './src/screens/FullStoryScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -54,6 +57,21 @@ const App = () => {
                         <Stack.Screen 
                             name="TimelineScreen" 
                             component={TimelineScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="ScoreboardScreen" 
+                            component={ScoreboardScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="StoriesScreen" 
+                            component={StoriesScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="FullStoryScreen" 
+                            component={FullStoryScreen} 
                             options={{ headerShown: false }} 
                         />
                     </Stack.Navigator>

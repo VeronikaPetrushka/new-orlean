@@ -138,12 +138,7 @@ const SettingsModal = ({ visible, onClose }) => {
             await AsyncStorage.setItem('userProfile', "");
             await AsyncStorage.removeItem('uploadedImage');
             await AsyncStorage.removeItem('totalScore');
-            await AsyncStorage.removeItem('archive');
-            await AsyncStorage.removeItem('purchasedItems');
-            await AsyncStorage.removeItem('ingredients');
-            await AsyncStorage.removeItem('preparation');
-            await AsyncStorage.removeItem('purchasedStories');
-            await AsyncStorage.removeItem('rewardTimer');
+            await AsyncStorage.removeItem('album');
 
             setShowResetConfirmation(false);
 
@@ -157,6 +152,8 @@ const SettingsModal = ({ visible, onClose }) => {
 
             await loadProfile(); 
             await loadSettings();
+
+            onClose();
 
         } catch (error) {
             console.error('Error resetting progress:', error);
