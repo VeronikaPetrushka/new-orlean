@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         padding: 20,
-        paddingTop: height * 0.05,
+        paddingTop: height * 0.07,
     },
 
     btnsContainer: {

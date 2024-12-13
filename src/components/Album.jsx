@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     },
 
     scrollView: {
-        height: height * 0.3,
+        height: 230,
     },
 
     imageScrollContainer: {
@@ -157,8 +157,8 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: width * 0.75,
-        height: height * 0.3,
+        width: width * 0.8,
+        height: 230,
         borderRadius: 10,
         resizeMode: 'cover',
     },

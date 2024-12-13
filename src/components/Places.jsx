@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, TouchableOpacity, Text, Image, Dimensions, StyleSheet, ImageBackground, ScrollView } from "react-native"
 import { useNavigation } from "@react-navigation/native"
-import Icons from "./Icons";
 import places from "../constants/places";
+import Icons from "./Icons";
 import Map from "./Map"
 
 const { height } = Dimensions.get('window');
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         padding: 20,
-        paddingTop: height * 0.05,
+        paddingTop: height * 0.07,
     },
 
     back: {
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         height: 40,
         position: 'absolute',
         left: 30,
-        top: height * 0.07,
+        top: height * 0.08,
         zIndex: 10
     },
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: height * 0.24,
+        width: height * 0.2,
         height: '100%',
         resizeMode: 'cover',
         borderRadius: 12
