@@ -157,8 +157,8 @@ const styles = StyleSheet.create({
   },
 
   userContainer: {
-    width: height * 0.23,
-    height: height * 0.23,
+    width: height * 0.19,
+    height: height * 0.19,
     padding: 15,
     backgroundColor: '#fff',
     alignItems: 'center',
