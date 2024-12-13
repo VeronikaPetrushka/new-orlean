@@ -55,6 +55,14 @@ const Icons = ({ type, light }) => {
     case 'dice':
       imageSource = require('../assets/craps/dice.png');
       break;
+    case 'time':
+      imageSource = require('../assets/common/time.png');
+      iconStyle.push(styles.contain);
+      break;
+    case 'shot':
+      imageSource = require('../assets/common/shot.png');
+      iconStyle.push(styles.contain);
+      break;
   }
 
   return (

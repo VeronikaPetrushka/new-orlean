@@ -15,6 +15,7 @@ import ScoreboardScreen from './src/screens/ScoreboardScreen';
 import StoriesScreen from './src/screens/StoriesScreen';
 import FullStoryScreen from './src/screens/FullStoryScreen';
 import CrapsGameScreen from './src/screens/CrapsGameScreen';
+import QuizScreen from './src/screens/QuizScreen';
 
 import WelcomeModal from './src/components/WelcomeModal';
 
@@ -78,6 +79,11 @@ const App = () => {
                         <Stack.Screen 
                             name="CrapsGameScreen" 
                             component={CrapsGameScreen} 
+                            options={{ headerShown: false }} 
+                        />
+                        <Stack.Screen 
+                            name="QuizScreen" 
+                            component={QuizScreen} 
                             options={{ headerShown: false }} 
                         />
                     </Stack.Navigator>
