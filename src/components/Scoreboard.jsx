@@ -90,7 +90,7 @@ const Scoreboard = () => {
   };
 
   return (
-    <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
+    <ImageBackground source={require('../assets/back/back.png')} style={{flex: 1}}>
         <View style={styles.container}>
 
             <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   totalScore: {
     fontSize: 26,
     fontWeight: '900',
-    color: '#5109ae',
+    color: '#fff',
     marginBottom: height * 0.05
   },
 

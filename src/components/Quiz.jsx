@@ -80,7 +80,7 @@ const Quiz = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{ flex: 1 }}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{ flex: 1 }}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
@@ -101,7 +101,7 @@ const Quiz = () => {
 
                             <Text style={styles.resultText}>Great job! You answered correctly {correctAnswers} times.</Text>
 
-                            <Text style={[styles.resultText, {color: '#8638c2', marginBottom: height * 0.1}]}>Challenge yourself to achieve an even higher score — try again and dive deeper into your knowledge!</Text>
+                            <Text style={[styles.resultText, {color: '#fceb9d', marginBottom: height * 0.1}]}>Challenge yourself to achieve an even higher score — try again and dive deeper into your knowledge!</Text>
 
                             <TouchableOpacity style={styles.restartButton} onPress={handleRestart}>
                                 <Text style={styles.restartButtonText}>Go Back to Modes</Text>
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 26,
         fontWeight: '900',
-        color: '#5109ae',
+        color: '#fceb9d',
         textAlign: 'center',
         marginBottom: height * 0.1,
     },
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     subTitle: {
         fontSize: 22,
         fontWeight: '800',
-        color: '#994802',
+        color: '#ffd080',
         textAlign: 'center',
         marginBottom: height * 0.07,
     },
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     modeText: {
         fontSize: 14,
         fontWeight: '800',
-        color: '#994802',
+        color: '#ffd080',
         textAlign: 'center',
         marginTop: height * 0.02,
     },
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     questionText: {
         fontSize: 20,
         fontWeight: '700',
-        color: '#5109ae',
+        color: '#ffd080',
         textAlign: 'center',
         marginVertical: height * 0.03,
         height: 100
@@ -292,14 +292,14 @@ const styles = StyleSheet.create({
     timerText: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#5109ae',
+        color: '#fceb9d',
         marginTop: 5,
     },
 
     resultText: {
         fontSize: 20,
         fontWeight: '700',
-        color: '#994802',
+        color: '#ffd080',
         textAlign: 'center',
         marginVertical: height * 0.03,
     },
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
     score: {
         fontSize: 24,
         fontWeight: '900',
-        color: '#994802',
+        color: '#5109ae',
         textAlign: 'center',
     }
 

@@ -11,7 +11,7 @@ const Places = () => {
     const navigation = useNavigation();
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={styles.back} onPress={() => navigation.goBack('')}>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: '900',
-        color: '#5109ae',
+        color: '#fceb9d',
         textAlign: 'center',
         marginVertical: height * 0.03
     },
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 19,
         fontWeight: '800',
-        color: '#915320',
+        color: '#ffd080',
         textAlign: 'center',
     },
 

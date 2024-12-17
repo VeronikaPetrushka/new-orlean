@@ -17,7 +17,7 @@ const Home = () => {
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={styles.btnsContainer}>
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     btnText: {
         fontSize: 12,
         fontWeight: '800',
-        color: '#403c33',
+        color: '#fff',
         textAlign: 'center'
     },
 

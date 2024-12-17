@@ -62,7 +62,7 @@ const Details = ({ place }) => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={styles.iconsContainer}>
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 22,
         fontWeight: '900',
-        color: '#915320',
+        color: '#fceb9d',
         textAlign: 'center',
         marginBottom: height * 0.02
     },
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     address: {
         fontSize: 16,
         fontWeight: '500',
-        color: '#946231',
+        color: '#ffd080',
         marginBottom: height * 0.02
     },
 
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
     subTitle: {
         fontSize: 20,
         fontWeight: '900',
-        color: '#915320',
+        color: '#ffd080',
         textAlign: 'center',
         marginBottom: height * 0.01
     }

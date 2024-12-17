@@ -10,7 +10,7 @@ const Stories = () => {
     const navigation = useNavigation();
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{ flex: 1 }}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{ flex: 1 }}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     subTitle: {
         fontSize: 17,
         fontWeight: '800',
-        color: '#994802',
+        color: '#fceb9d',
         textAlign: 'center',
         marginBottom: height * 0.03,
     },

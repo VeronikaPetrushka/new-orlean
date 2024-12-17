@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    tintColor: '#ff8003',
+    tintColor: '#fa982f',
   },
   contain: {
     width: '100%',

@@ -21,7 +21,7 @@ const Timeline = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{ flex: 1 }}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{ flex: 1 }}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>

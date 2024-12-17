@@ -59,7 +59,7 @@ const CrapsGame = () => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{ flex: 1 }}>
+        <ImageBackground source={require('../assets/back/back.png')} style={{ flex: 1 }}>
             <View style={styles.container}>
 
                 <TouchableOpacity style={styles.back} onPress={() => navigation.goBack('')}>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     score: {
         fontSize: 24,
         fontWeight: '900',
-        color: '#994802',
+        color: '#fceb9d',
         textAlign: 'center',
         marginRight: 10
     },
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     message: {
         fontSize: 19,
         fontWeight: '800',
-        color: '#994802',
+        color: '#fceb9d',
         textAlign: 'center',
         marginVertical: height * 0.03,
     },
